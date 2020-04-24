@@ -26,6 +26,7 @@ namespace DotNetCore.Demo.Startup
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //服务注册，AddXXX();
             Console.WriteLine("Startup.ConfigureServices");
             services.AddControllers();
         }
@@ -33,6 +34,7 @@ namespace DotNetCore.Demo.Startup
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            //配置中间件，UseXXX();
             Console.WriteLine("Startup.Configure");
             if (env.IsDevelopment())
             {
