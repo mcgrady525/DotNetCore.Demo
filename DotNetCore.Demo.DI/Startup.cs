@@ -51,12 +51,12 @@ namespace DotNetCore.Demo.DI
             #endregion
 
             #region ÒÆ³ýºÍÌæ»»
-            services.RemoveAll<IOrderService>();
-            services.Replace(ServiceDescriptor.Singleton<IOrderService, OrderServiceV2>());
+            //services.RemoveAll<IOrderService>();
+            //services.Replace(ServiceDescriptor.Singleton<IOrderService, OrderServiceV2>());
             #endregion
 
             #region ×¢²á·ºÐÍÄ£°å
-            services.AddSingleton(typeof(IGenericService<>), typeof(GenericService<>)); 
+            services.AddSingleton(typeof(IGenericService<>), typeof(GenericService<>));
             #endregion
 
             services.AddControllers();

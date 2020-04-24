@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DotNetCore.Demo.DI.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace DotNetCore.Demo.DI.Controllers
@@ -26,10 +27,10 @@ namespace DotNetCore.Demo.DI.Controllers
         private readonly ILogger<WeatherForecastController> _logger;
         private readonly IOrderService _orderService;
 
-
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IOrderService orderService, IGenericService<IOrderService> genericService)
+        //public WeatherForecastController(ILogger<WeatherForecastController> logger, IOrderService orderService, IGenericService<IOrderService> genericService)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
-            _orderService = orderService;
+            //_orderService = orderService;
             _logger = logger;
         }
 
@@ -62,7 +63,7 @@ namespace DotNetCore.Demo.DI.Controllers
 
             Console.WriteLine(string.Format("transientService1的hashcode:{0}", transientService1.GetHashCode()));
             Console.WriteLine(string.Format("transientService2的hashcode:{0}", transientService2.GetHashCode()));
-            Console.WriteLine("*******************end****************************");
+            Console.WriteLine("*******************end************************");
 
             return 1;
         }
@@ -74,6 +75,34 @@ namespace DotNetCore.Demo.DI.Controllers
             {
                 Console.WriteLine("获取到的实例的hashcode：{0}", item.GetHashCode());
             }
+
+            return 1;
+        }
+
+        [HttpGet]
+        public int TestDI3([FromServices]IOrderService orderService,
+                            [FromServices]IOrderService orderService2)
+        {
+            /***********容器的生命周期**************/
+            /*
+             * 1，单例是注册到根容器的，单例只有整个应用程序退出时才会释放
+             * 2，范围是在每个request时创建实例的，请求结束时或显式using时由容器释放
+             * 3，瞬时是在每个获取实例时创建的，请求结束时或显式using时由容器释放
+             * 4，每个请求执行，或显式CreateScope都会创建一个子容器。
+             * 5，不要直接在根容器创建实例，否则只有在整个应用程序退出时才会释放。
+             */
+
+            Console.WriteLine("**************1*****************");
+
+            //子容器
+            using (var scope= HttpContext.RequestServices.CreateScope())
+            {
+                var v1 = scope.ServiceProvider.GetService<IOrderService>();
+                var v2 = scope.ServiceProvider.GetService<IOrderService>();
+            }
+
+            Console.WriteLine("**************2*****************");
+            Console.WriteLine("请求处理结束！");
 
             return 1;
         }
