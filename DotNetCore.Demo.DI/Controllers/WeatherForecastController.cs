@@ -107,5 +107,13 @@ namespace DotNetCore.Demo.DI.Controllers
             return 1;
         }
 
+        [HttpGet]
+        public int TesAutofac1([FromServices]IAutofacService autofacService)
+        {
+            //Console.WriteLine(string.Format("IAutofacService.hashcode:{0}", autofacService.GetHashCode()));
+
+            return 1;
+        }
+
     }
 }

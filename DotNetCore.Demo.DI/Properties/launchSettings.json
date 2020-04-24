@@ -20,7 +20,7 @@
     "DotNetCore.Demo.DI": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast/testdi3",
+      "launchUrl": "weatherforecast/TesAutofac1",
       "applicationUrl": "http://localhost:5000",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
