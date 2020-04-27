@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DotNetCore.Demo.Configure.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -184,12 +185,45 @@ namespace DotNetCore.Demo.Configure.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public int TestConfiguration7()
+        public int TestConfiguration7([FromServices]IOrderService orderService)
         {
-
+            //选项框架解除了服务和配置之间的依赖关系
+            Console.WriteLine(string.Format("OrderService.ShowMaxOrderCount:{0}", orderService.ShowMaxOrderCount()));
 
             return 1;
         }
+
+        /// <summary>
+        /// 选项框架热更新
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int TestConfiguration8([FromServices]IOrderService orderService)
+        {
+            //单例模式下使用：IOptionsMonitor
+            //作用域模式下使用：IOptionsSnapshot
+            //服务扩展
+            Console.WriteLine(string.Format("OrderService.ShowMaxOrderCount:{0}", orderService.ShowMaxOrderCount()));
+
+            return 1;
+        }
+
+        /// <summary>
+        /// 选项框架验证
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public int TestConfiguration9([FromServices]IOrderService orderService)
+        {
+            //方法1：直接注册验证函数
+            //方法2：使用DataAnnotations特性
+            //方法3：实现IValidateOptions<TOptions>接口
+
+            Console.WriteLine(string.Format("OrderService.ShowMaxOrderCount:{0}", orderService.ShowMaxOrderCount()));
+
+            return 1;
+        }
+
     }
 
     public class StrongClassConfig

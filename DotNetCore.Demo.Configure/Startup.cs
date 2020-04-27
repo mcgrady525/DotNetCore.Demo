@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DotNetCore.Demo.Configure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +27,7 @@ namespace DotNetCore.Demo.Configure
         public void ConfigureServices(IServiceCollection services)
         {
             //×¢²á·þÎñ
+            services.AddOrderService(Configuration);
 
             services.AddControllers();
         }
