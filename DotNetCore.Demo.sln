@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.StaticFile"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.FileProvider", "DotNetCore.Demo.FileProvider\DotNetCore.Demo.FileProvider.csproj", "{FF906822-38C8-459B-BB13-361365B28E8E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Route", "DotNetCore.Demo.Route\DotNetCore.Demo.Route.csproj", "{573AD9D0-1321-4856-BF9C-456C3A0A002C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{FF906822-38C8-459B-BB13-361365B28E8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF906822-38C8-459B-BB13-361365B28E8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF906822-38C8-459B-BB13-361365B28E8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{573AD9D0-1321-4856-BF9C-456C3A0A002C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573AD9D0-1321-4856-BF9C-456C3A0A002C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573AD9D0-1321-4856-BF9C-456C3A0A002C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573AD9D0-1321-4856-BF9C-456C3A0A002C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
