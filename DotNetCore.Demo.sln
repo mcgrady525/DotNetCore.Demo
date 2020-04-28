@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Middleware"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Exception", "DotNetCore.Demo.Exception\DotNetCore.Demo.Exception.csproj", "{57FDB784-9665-4E7F-9A93-A3CE2CD563FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.StaticFile", "DotNetCore.Demo.StaticFile\DotNetCore.Demo.StaticFile.csproj", "{7D781A23-4B37-45DF-A351-3569EE120C89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{57FDB784-9665-4E7F-9A93-A3CE2CD563FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{57FDB784-9665-4E7F-9A93-A3CE2CD563FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{57FDB784-9665-4E7F-9A93-A3CE2CD563FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D781A23-4B37-45DF-A351-3569EE120C89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D781A23-4B37-45DF-A351-3569EE120C89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D781A23-4B37-45DF-A351-3569EE120C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D781A23-4B37-45DF-A351-3569EE120C89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
