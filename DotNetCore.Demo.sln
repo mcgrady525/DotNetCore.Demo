@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Startup", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.DI", "DotNetCore.Demo.DI\DotNetCore.Demo.DI.csproj", "{FBB5E8A7-5774-4B70-BB5E-77F0AAE476A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Configure", "DotNetCore.Demo.Configure\DotNetCore.Demo.Configure.csproj", "{696010B6-FFE5-4881-9F1F-D83F1EEFEA30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Configure", "DotNetCore.Demo.Configure\DotNetCore.Demo.Configure.csproj", "{696010B6-FFE5-4881-9F1F-D83F1EEFEA30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Logging", "DotNetCore.Demo.Logging\DotNetCore.Demo.Logging.csproj", "{9DBE7A43-7631-45B6-9EE9-3EBDC1F03286}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Logging", "DotNetCore.Demo.Logging\DotNetCore.Demo.Logging.csproj", "{9DBE7A43-7631-45B6-9EE9-3EBDC1F03286}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Middleware", "DotNetCore.Demo.Middleware\DotNetCore.Demo.Middleware.csproj", "{564F9C33-7A16-4117-AC40-E6B83C4DCF29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{9DBE7A43-7631-45B6-9EE9-3EBDC1F03286}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DBE7A43-7631-45B6-9EE9-3EBDC1F03286}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DBE7A43-7631-45B6-9EE9-3EBDC1F03286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{564F9C33-7A16-4117-AC40-E6B83C4DCF29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{564F9C33-7A16-4117-AC40-E6B83C4DCF29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{564F9C33-7A16-4117-AC40-E6B83C4DCF29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{564F9C33-7A16-4117-AC40-E6B83C4DCF29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
