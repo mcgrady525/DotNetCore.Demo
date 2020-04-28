@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 namespace DotNetCore.Demo.Logging.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -35,5 +35,61 @@ namespace DotNetCore.Demo.Logging.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet]
+        public int TestLogging1()
+        {
+            /****************记录日志的最佳姿势*****************************/
+            /*
+             * 使用依赖注入的方式获取ILogger对象，然后记录日志
+             */
+
+            _logger.LogInformation("记录information日志！");
+
+            return 1;
+        }
+
+        [HttpGet]
+        public int TestLogging2()
+        {
+            /****************日志作用域*******************/
+            /*
+             * 1，一个事务包含多条操作时
+             * 2，复杂流程的日志关联时
+             * 3，调用链追踪与请求处理过程对应时
+             */
+            _logger.LogInformation("开始了！");
+
+            //模拟业务处理
+            System.Threading.Thread.Sleep(500);
+
+
+            _logger.LogInformation("结束了！");
+
+
+            return 1;
+        }
+
+        [HttpGet]
+        public int TestLogging3()
+        {
+            /****************结构化日志组件Serilog*******************/
+            /*
+             * 1，实现日志告警
+             * 2，实现上下文的关联
+             * 3，实现与追踪系统集成
+             */
+
+            _logger.LogInformation("测试Serilog开始！");
+
+            //模拟业务处理
+            System.Threading.Thread.Sleep(500);
+
+            _logger.LogInformation("测试Serilog结束！");
+
+            return 1;
+        }
+
+
     }
 }
