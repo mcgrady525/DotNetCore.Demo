@@ -10,9 +10,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DotNetCore.Demo.Exception.Exceptions
 {
-    public class MyExceptionFilterAttribute : ExceptionFilterAttribute
+    public class MyExceptionFilter: IExceptionFilter
     {
-        public override void OnException(ExceptionContext context)
+        public void OnException(ExceptionContext context)
         {
             IKnownException knownException = context.Exception as IKnownException;
             if (knownException == null)

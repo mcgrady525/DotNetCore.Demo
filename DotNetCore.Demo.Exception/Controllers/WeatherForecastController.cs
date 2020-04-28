@@ -4,11 +4,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using DotNetCore.Demo.Exception.Exceptions;
 
 namespace DotNetCore.Demo.Exception.Controllers
 {
     [ApiController]
     [Route("[controller]/[action]")]
+    [MyExceptionFilter]
     public class WeatherForecastController : ControllerBase
     {
         /*********************异常处理的四种方式******************************/
@@ -47,7 +49,11 @@ namespace DotNetCore.Demo.Exception.Controllers
         [HttpGet]
         public int TestException1()
         {
-            throw new System.Exception("测试异常!");
+            //系统异常
+            //throw new System.Exception("这是系统异常！");
+
+            //业务异常
+            throw new MyServerException("这是业务异常！", 65);
 
             return 1;
         }
