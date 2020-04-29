@@ -13,15 +13,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Configure",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Logging", "DotNetCore.Demo.Logging\DotNetCore.Demo.Logging.csproj", "{9DBE7A43-7631-45B6-9EE9-3EBDC1F03286}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Middleware", "DotNetCore.Demo.Middleware\DotNetCore.Demo.Middleware.csproj", "{564F9C33-7A16-4117-AC40-E6B83C4DCF29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Middleware", "DotNetCore.Demo.Middleware\DotNetCore.Demo.Middleware.csproj", "{564F9C33-7A16-4117-AC40-E6B83C4DCF29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Exception", "DotNetCore.Demo.Exception\DotNetCore.Demo.Exception.csproj", "{57FDB784-9665-4E7F-9A93-A3CE2CD563FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Exception", "DotNetCore.Demo.Exception\DotNetCore.Demo.Exception.csproj", "{57FDB784-9665-4E7F-9A93-A3CE2CD563FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.StaticFile", "DotNetCore.Demo.StaticFile\DotNetCore.Demo.StaticFile.csproj", "{7D781A23-4B37-45DF-A351-3569EE120C89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.StaticFile", "DotNetCore.Demo.StaticFile\DotNetCore.Demo.StaticFile.csproj", "{7D781A23-4B37-45DF-A351-3569EE120C89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.FileProvider", "DotNetCore.Demo.FileProvider\DotNetCore.Demo.FileProvider.csproj", "{FF906822-38C8-459B-BB13-361365B28E8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.FileProvider", "DotNetCore.Demo.FileProvider\DotNetCore.Demo.FileProvider.csproj", "{FF906822-38C8-459B-BB13-361365B28E8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Route", "DotNetCore.Demo.Route\DotNetCore.Demo.Route.csproj", "{573AD9D0-1321-4856-BF9C-456C3A0A002C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Route", "DotNetCore.Demo.Route\DotNetCore.Demo.Route.csproj", "{573AD9D0-1321-4856-BF9C-456C3A0A002C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Http", "DotNetCore.Demo.Http\DotNetCore.Demo.Http.csproj", "{D8E02FCE-89C0-4C96-94FE-9A632049E2AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Http.RemoteApi", "DotNetCore.Demo.Http.RemoteApi\DotNetCore.Demo.Http.RemoteApi.csproj", "{B1B7B548-2C04-44FB-9F83-A33EBFBAFD62}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{573AD9D0-1321-4856-BF9C-456C3A0A002C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{573AD9D0-1321-4856-BF9C-456C3A0A002C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{573AD9D0-1321-4856-BF9C-456C3A0A002C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8E02FCE-89C0-4C96-94FE-9A632049E2AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8E02FCE-89C0-4C96-94FE-9A632049E2AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8E02FCE-89C0-4C96-94FE-9A632049E2AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8E02FCE-89C0-4C96-94FE-9A632049E2AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1B7B548-2C04-44FB-9F83-A33EBFBAFD62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B7B548-2C04-44FB-9F83-A33EBFBAFD62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B7B548-2C04-44FB-9F83-A33EBFBAFD62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B7B548-2C04-44FB-9F83-A33EBFBAFD62}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
