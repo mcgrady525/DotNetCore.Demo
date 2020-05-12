@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option csharp_namespace = "DotNetCore.Demo.GRPC.Server.Proto";
+
+package DotNetCore.Demo.GRPC.Server.Proto;
+
+service OrderGrpc{
+	rpc CreateOrder(CreateOrderRequest) returns (CreateOrderResponse);
+}
+
+message CreateOrderRequest {
+	string buyerId =1;
+	int32 productId =2;
+	double unitPrice =3;
+	double discount =4;
+	int32 units= 5;
+}
+
+message CreateOrderResponse {
+	int32 orderId=1;
+}

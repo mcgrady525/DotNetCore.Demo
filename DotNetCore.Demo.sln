@@ -23,9 +23,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.FileProvide
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Route", "DotNetCore.Demo.Route\DotNetCore.Demo.Route.csproj", "{573AD9D0-1321-4856-BF9C-456C3A0A002C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Http", "DotNetCore.Demo.Http\DotNetCore.Demo.Http.csproj", "{D8E02FCE-89C0-4C96-94FE-9A632049E2AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Http", "DotNetCore.Demo.Http\DotNetCore.Demo.Http.csproj", "{D8E02FCE-89C0-4C96-94FE-9A632049E2AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Http.RemoteApi", "DotNetCore.Demo.Http.RemoteApi\DotNetCore.Demo.Http.RemoteApi.csproj", "{B1B7B548-2C04-44FB-9F83-A33EBFBAFD62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Http.RemoteApi", "DotNetCore.Demo.Http.RemoteApi\DotNetCore.Demo.Http.RemoteApi.csproj", "{B1B7B548-2C04-44FB-9F83-A33EBFBAFD62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.GRPC.Server", "DotNetCore.Demo.GRPC.Server\DotNetCore.Demo.GRPC.Server.csproj", "{FB85C4BD-208C-42DD-96EA-43FDDFE1297E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.GRPC.Client", "DotNetCore.Demo.GRPC.Client\DotNetCore.Demo.GRPC.Client.csproj", "{4F716D56-61AC-44B4-9E3C-AAF13D820445}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +85,14 @@ Global
 		{B1B7B548-2C04-44FB-9F83-A33EBFBAFD62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1B7B548-2C04-44FB-9F83-A33EBFBAFD62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1B7B548-2C04-44FB-9F83-A33EBFBAFD62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB85C4BD-208C-42DD-96EA-43FDDFE1297E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB85C4BD-208C-42DD-96EA-43FDDFE1297E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB85C4BD-208C-42DD-96EA-43FDDFE1297E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB85C4BD-208C-42DD-96EA-43FDDFE1297E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F716D56-61AC-44B4-9E3C-AAF13D820445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F716D56-61AC-44B4-9E3C-AAF13D820445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F716D56-61AC-44B4-9E3C-AAF13D820445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F716D56-61AC-44B4-9E3C-AAF13D820445}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
