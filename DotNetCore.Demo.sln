@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.GRPC.Server
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.GRPC.Client", "DotNetCore.Demo.GRPC.Client\DotNetCore.Demo.GRPC.Client.csproj", "{4F716D56-61AC-44B4-9E3C-AAF13D820445}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Polly", "DotNetCore.Demo.Polly\DotNetCore.Demo.Polly.csproj", "{AC83F086-C097-4F58-814E-C057728C7B08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Polly", "DotNetCore.Demo.Polly\DotNetCore.Demo.Polly.csproj", "{AC83F086-C097-4F58-814E-C057728C7B08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Logging.Default", "DotNetCore.Demo.Logging.Default\DotNetCore.Demo.Logging.Default.csproj", "{6A9A2E97-3631-437B-80AB-E49B89C97212}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{AC83F086-C097-4F58-814E-C057728C7B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC83F086-C097-4F58-814E-C057728C7B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC83F086-C097-4F58-814E-C057728C7B08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A9A2E97-3631-437B-80AB-E49B89C97212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A9A2E97-3631-437B-80AB-E49B89C97212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A9A2E97-3631-437B-80AB-E49B89C97212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A9A2E97-3631-437B-80AB-E49B89C97212}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
