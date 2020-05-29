@@ -39,7 +39,16 @@ namespace DotNetCore.Demo.Logging.Serilog.Controllers
         [HttpGet]
         public int TestSerilog1()
         {
-            _logger.LogInformation("log from TestSerilog1!");
+            _logger.LogInformation("这是一条information日志！");
+
+            try
+            {
+                throw new Exception("异常测试");
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "调用方法TestSerilog1发生异常！");
+            }
 
             return 1;
         }

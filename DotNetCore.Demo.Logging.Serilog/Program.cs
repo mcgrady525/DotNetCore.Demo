@@ -38,7 +38,7 @@ namespace DotNetCore.Demo.Logging.Serilog
             .MinimumLevel.Debug()
             .Enrich.FromLogContext()
             .WriteTo.Console(new RenderedCompactJsonFormatter())
-            .WriteTo.File(formatter: new CompactJsonFormatter(), "logs\\test-serilog.txt", rollingInterval: RollingInterval.Day)//输出到文件
+            .WriteTo.File(formatter: new CompactJsonFormatter(), "logs\\allfile-.txt", rollingInterval: RollingInterval.Day)//输出到文件
             .CreateLogger();
 
             try
