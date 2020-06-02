@@ -33,11 +33,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.GRPC.Client
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Polly", "DotNetCore.Demo.Polly\DotNetCore.Demo.Polly.csproj", "{AC83F086-C097-4F58-814E-C057728C7B08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Logging.Default", "DotNetCore.Demo.Logging.Default\DotNetCore.Demo.Logging.Default.csproj", "{6A9A2E97-3631-437B-80AB-E49B89C97212}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Logging.Default", "DotNetCore.Demo.Logging.Default\DotNetCore.Demo.Logging.Default.csproj", "{6A9A2E97-3631-437B-80AB-E49B89C97212}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Logging.Serilog", "DotNetCore.Demo.Logging.Serilog\DotNetCore.Demo.Logging.Serilog.csproj", "{0E522DF7-7C63-4388-A263-DD6053A97209}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Logging.Serilog", "DotNetCore.Demo.Logging.Serilog\DotNetCore.Demo.Logging.Serilog.csproj", "{0E522DF7-7C63-4388-A263-DD6053A97209}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Logging.NLog", "DotNetCore.Demo.Logging.NLog\DotNetCore.Demo.Logging.NLog.csproj", "{0FD2847A-4C31-45ED-B029-2F75C5BDE3F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Logging.NLog", "DotNetCore.Demo.Logging.NLog\DotNetCore.Demo.Logging.NLog.csproj", "{0FD2847A-4C31-45ED-B029-2F75C5BDE3F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Cache", "DotNetCore.Demo.Cache\DotNetCore.Demo.Cache.csproj", "{66672303-351E-4C6C-9D8A-51B7DE9EA2D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{0FD2847A-4C31-45ED-B029-2F75C5BDE3F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0FD2847A-4C31-45ED-B029-2F75C5BDE3F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0FD2847A-4C31-45ED-B029-2F75C5BDE3F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66672303-351E-4C6C-9D8A-51B7DE9EA2D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66672303-351E-4C6C-9D8A-51B7DE9EA2D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66672303-351E-4C6C-9D8A-51B7DE9EA2D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66672303-351E-4C6C-9D8A-51B7DE9EA2D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
