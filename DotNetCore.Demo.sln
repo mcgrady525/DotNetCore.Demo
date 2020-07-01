@@ -39,7 +39,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Logging.Ser
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Logging.NLog", "DotNetCore.Demo.Logging.NLog\DotNetCore.Demo.Logging.NLog.csproj", "{0FD2847A-4C31-45ED-B029-2F75C5BDE3F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Cache", "DotNetCore.Demo.Cache\DotNetCore.Demo.Cache.csproj", "{66672303-351E-4C6C-9D8A-51B7DE9EA2D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Cache", "DotNetCore.Demo.Cache\DotNetCore.Demo.Cache.csproj", "{66672303-351E-4C6C-9D8A-51B7DE9EA2D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.FTP", "DotNetCore.Demo.FTP\DotNetCore.Demo.FTP.csproj", "{DE9438C2-866C-4451-8220-B4A1A5D19B4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -123,6 +125,10 @@ Global
 		{66672303-351E-4C6C-9D8A-51B7DE9EA2D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66672303-351E-4C6C-9D8A-51B7DE9EA2D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66672303-351E-4C6C-9D8A-51B7DE9EA2D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE9438C2-866C-4451-8220-B4A1A5D19B4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE9438C2-866C-4451-8220-B4A1A5D19B4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE9438C2-866C-4451-8220-B4A1A5D19B4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE9438C2-866C-4451-8220-B4A1A5D19B4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
