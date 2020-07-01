@@ -32,7 +32,7 @@ namespace DotNetCore.Demo.FTP.Controllers
             try
             {
                 // create an FTP client
-                FtpClient client = new FtpClient("119.23.66.207");
+                FtpClient client = new FtpClient("103.44.239.83");
 
                 // specify the login credentials, unless you want to use the "anonymous" user account
                 client.Credentials = new NetworkCredential("uftpServerInfo", "fUser!2020(629)");
@@ -41,7 +41,8 @@ namespace DotNetCore.Demo.FTP.Controllers
                 client.Connect();
 
                 // get a list of files and directories in the "/htdocs" folder
-                foreach (FtpListItem item in client.GetListing("/ServerInfo"))
+                var ftpItems = client.GetListing("/");
+                foreach (FtpListItem item in ftpItems)
                 {
                     //1，下载
                     //2，读取内容并解析
