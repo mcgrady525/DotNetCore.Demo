@@ -16,8 +16,6 @@ namespace DotNetCore.Demo.Logging.NLog
         public static void Main(string[] args)
         {
             var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
-            //var logger = NLogBuilder.ConfigureNLog("nlog.config").GetLogger("Default.Log");
-
             try
             {
                 logger.Debug("开始初始化...");

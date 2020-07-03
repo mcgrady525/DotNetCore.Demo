@@ -41,12 +41,13 @@ namespace DotNetCore.Demo.Logging.NLog.Controllers
         {
             try
             {
+                _logger.LogTrace("这是一条trace日志。");
                 _logger.LogDebug("测试写debug日志！");
                 _logger.LogInformation("测试写information日志！");
                 _logger.LogWarning("测试写warning日志！");
-                _logger.LogError("测试写error日志！");
+                //_logger.LogError("测试写error日志！");
                 _logger.LogCritical("测试写critical日志！");
-                //throw new Exception("测试异常！");
+                throw new Exception("测试异常！");
             }
             catch (Exception ex)
             {
