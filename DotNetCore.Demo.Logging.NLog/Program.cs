@@ -38,11 +38,11 @@ namespace DotNetCore.Demo.Logging.NLog
                 {
                     webBuilder.UseStartup<Startup>();
                 })
-                .ConfigureLogging(p =>
-                {
-                    p.ClearProviders();
-                    p.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Debug);
-                })
+                //.ConfigureLogging(p =>
+                //{
+                //    p.ClearProviders();
+                //    p.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
+                //})
                 .UseNLog();
     }
 }

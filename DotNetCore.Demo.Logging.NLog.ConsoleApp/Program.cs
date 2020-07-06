@@ -24,10 +24,10 @@ namespace DotNetCore.Demo.Logging.NLog.ConsoleApp
                 var servicesProvider = new ServiceCollection()
                     .AddLogging(loggingBuilder =>
                     {
-                        // configure Logging with NLog
                         loggingBuilder.ClearProviders();
-                        loggingBuilder.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
-                        loggingBuilder.AddNLog(config);
+                        loggingBuilder.AddConfiguration(config.GetSection("Logging"));//或loggingBuilder.SetMinimumLevel(Microsoft.Extensions.Logging.LogLevel.Trace);
+                        loggingBuilder.AddConsole();
+                        loggingBuilder.AddNLog();
                     })
                     .AddScoped<IRunner, Runner>()
                     .BuildServiceProvider();
