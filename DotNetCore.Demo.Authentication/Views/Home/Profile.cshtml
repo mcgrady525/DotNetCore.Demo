@@ -1,0 +1,14 @@
+﻿
+@model DotNetCore.Demo.Authentication.Controllers.Profile;
+@{
+    ViewData["Title"] = "个人信息";
+}
+
+<h2>您好，当前登录用户：@Model.Name</h2>
+<h3>身份认证方式：@Model.AuthenticationType</h3>
+<h3>身份信息：</h3>
+@foreach (var item in Model.Claims)
+{
+    <p>Claim type:@item.Key, Value:@item.Value</p>
+}
+
