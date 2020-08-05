@@ -51,6 +51,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore.Demo.Cookie", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Authentication", "DotNetCore.Demo.Authentication\DotNetCore.Demo.Authentication.csproj", "{5B1790FB-B475-4619-A5A0-0564E42370E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCore.Demo.Authorization", "DotNetCore.Demo.Authorization\DotNetCore.Demo.Authorization.csproj", "{B96934AF-EF50-4809-8947-8DD4AF92CF90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{5B1790FB-B475-4619-A5A0-0564E42370E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B1790FB-B475-4619-A5A0-0564E42370E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B1790FB-B475-4619-A5A0-0564E42370E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B96934AF-EF50-4809-8947-8DD4AF92CF90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B96934AF-EF50-4809-8947-8DD4AF92CF90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B96934AF-EF50-4809-8947-8DD4AF92CF90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B96934AF-EF50-4809-8947-8DD4AF92CF90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

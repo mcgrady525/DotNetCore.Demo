@@ -2,15 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Authorization;
 
-namespace DotNetCore.Demo.Authentication
+namespace DotNetCore.Demo.Authorization
 {
     public class Startup
     {
@@ -26,14 +26,10 @@ namespace DotNetCore.Demo.Authentication
         {
             services.AddControllersWithViews();
 
-            //注册身份认证
-            services.AddAuthentication(o =>
+            //注册授权
+            services.AddAuthorization(o => 
             {
-                o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-            })
-            .AddCookie(o=> 
-            {
-                o.LoginPath = "/Account/Login";
+                
             });
 
 
@@ -56,9 +52,6 @@ namespace DotNetCore.Demo.Authentication
             app.UseStaticFiles();
 
             app.UseRouting();
-
-            //注册身份认证中间件
-            app.UseAuthentication();
 
             app.UseAuthorization();
 

@@ -41,7 +41,6 @@ namespace DotNetCore.Demo.Authentication.Controllers
                 return Redirect("/Home/Index");
             }
 
-
             return View();
         }
 
