@@ -1,8 +1,18 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@model DotNetCore.Demo.Authorization.Models.ProfileInfo;
+@{
+    ViewData["Title"] = "首页";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h2>您好，当前登录用户：@Model.Name</h2>
+    <h3>身份认证方式：@Model.AuthenticationType</h3>
+    <h3>身份信息：</h3>
+    @foreach (var item in Model.Claims)
+    {
+        <p>Claim type:@item.Type, Value:@item.Value</p>
+    }
+</div>
+<div class="text-right">
+    <a class="btn btn-primary" href="/User/Logout">退出</a>
 </div>

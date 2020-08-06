@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "登录";
+}
+
+<form method="post" action="/User/Login">
+    <div class="form-group">
+        <label>用户名：<input type="text" name="username" class="form-control" /></label>
+    </div>
+    <div class="form-group">
+        <label>密码：<input type="password" name="password" class="form-control" /></label>
+    </div>
+    <button type="submit" class="btn btn-primary">登录</button>
+</form>
+

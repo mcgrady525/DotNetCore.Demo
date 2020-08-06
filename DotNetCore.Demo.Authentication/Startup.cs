@@ -31,9 +31,9 @@ namespace DotNetCore.Demo.Authentication
             {
                 o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             })
-            .AddCookie(o=> 
+            .AddCookie(o =>
             {
-                o.LoginPath = "/Account/Login";
+                //o.LoginPath = "/Account/Login";
             });
 
 

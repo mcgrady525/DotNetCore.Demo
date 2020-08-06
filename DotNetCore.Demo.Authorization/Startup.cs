@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 namespace DotNetCore.Demo.Authorization
 {
@@ -26,12 +28,16 @@ namespace DotNetCore.Demo.Authorization
         {
             services.AddControllersWithViews();
 
-            //注册授权
-            services.AddAuthorization(o => 
+            //注册身份认证
+            services.AddAuthentication(o =>
             {
-                
+                o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+            })
+            .AddCookie(o =>
+            {
+                o.LoginPath = "/User/Login";
+                o.AccessDeniedPath = "/Home/AccessDenied";
             });
-
 
         }
 
@@ -52,6 +58,9 @@ namespace DotNetCore.Demo.Authorization
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            //注册身份认证中间件
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using DotNetCore.Demo.Authorization.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DotNetCore.Demo.Authorization.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -20,7 +22,37 @@ namespace DotNetCore.Demo.Authorization.Controllers
 
         public IActionResult Index()
         {
+            //获取当前用户的身份信息
+            var profileInfo = new ProfileInfo();
+            profileInfo.Name = HttpContext.User.Identity.Name;
+            profileInfo.AuthenticationType = HttpContext.User.Identity.AuthenticationType;
+            profileInfo.Claims = HttpContext.User.Claims.ToList();
+
+            return View(profileInfo);
+        }
+
+        [Authorize(Roles ="admin")]
+        public IActionResult OnlyAdmin()
+        {
             return View();
+        }
+
+        [Authorize(Roles = "admin, ops")]
+        public IActionResult OnlyOps()
+        {
+            return View();
+        }
+
+        [Authorize(Roles = "admin, developer")]
+        public IActionResult OnlyDeveloper()
+        {
+            return View();
+        }
+
+        [AllowAnonymous]
+        public IActionResult AccessDenied()
+        {
+            return Content("对不起，你无权访问!");
         }
 
         public IActionResult Privacy()
